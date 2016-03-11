@@ -42,7 +42,8 @@ RUN chmod 755 /root/start.sh
 ##
 
 ADD install.sh /root/install.sh
-RUN chmod 755 /root/install.sh && /root/install.sh
+RUN chmod 755 /root/install.sh 
+RUN bash /root/install.sh 2>/dev/null || true
 
 ##
 #  Install Ubic Service Mgr
