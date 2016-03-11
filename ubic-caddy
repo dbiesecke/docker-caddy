@@ -1,0 +1,7 @@
+use Ubic::Service::SimpleDaemon;
+my $service = Ubic::Service::SimpleDaemon->new(
+     bin => "caddy -log='/var/log/http-caddy.log' --conf=/etc/caddy.conf",
+     cwd => '/var/www',
+     user => "root",
+);
+

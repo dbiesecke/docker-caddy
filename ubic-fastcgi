@@ -1,0 +1,6 @@
+use Ubic::Service::SimpleDaemon;
+my $service = Ubic::Service::SimpleDaemon->new(
+     bin => "/usr/bin/fastcgi-wrapper.pl",
+     user => "root",
+);
+
