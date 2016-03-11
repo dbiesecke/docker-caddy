@@ -8,8 +8,8 @@ wget http://nginxlibrary.com/downloads/perl-fcgi/perl-fcgi -O /etc/init.d/perl-f
 chmod +x /usr/bin/fastcgi-wrapper.pl
 chmod +x /etc/init.d/perl-fcgi
 update-rc.d perl-fcgi defaults
-insserv perl-fcgi || systemctl daemon-reload 
-/etc/init.d/perl-fcgi start
+#insserv perl-fcgi || systemctl daemon-reload 
+#/etc/init.d/perl-fcgi start
 
 cat > /etc/caddy.conf << EOF
     0.0.0.0:8443 {
